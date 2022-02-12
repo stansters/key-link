@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const { Client, Collection } = require('discord.js');
+const { Client } = require('discord.js');
 const { token } = require('./config.json');
 
 const intents = new Discord.Intents(4609)
@@ -11,8 +11,11 @@ client.once('ready', c => {
 });
 
 
-client.on('message', (message) => {
-    if(message.content.includes('key')) {
+client.on('messageCreate', (message) => {
+    if(message.content.includes('https://tr1v5.000webhostapp.com/key.html')){
+
+    }
+    else if(message.content.includes('key')) {
         message.reply('https://tr1v5.000webhostapp.com/key.html');
     }
 });
